@@ -18,4 +18,7 @@ Route::delete('/issues/{id}', [IssueController::class, 'destroy']);
 
 Route::apiResource('projects', ProjectController::class);
 Route::apiResource('employees', EmployeeController::class);
+Route::get('/issues/comments-count', [IssueController::class, 'issuesWithComments']);
+Route::get('/projects/{projectId}/completed-issues', [EmployeeController::class, 'completedByUser']);
+Route::get('/projects/{projectId}/high-priority', [IssueController::class, 'highPriority']);
 

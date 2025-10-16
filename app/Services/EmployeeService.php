@@ -3,6 +3,7 @@
 namespace App\Services;
 
 use App\Models\Employee;
+use App\Models\User;
 
 
 class EmployeeService
@@ -15,6 +16,7 @@ class EmployeeService
                             $query->where('status', 'completed');
                             }])
                             ->get();
+
         return $EmployeesIssues;
     }
 
